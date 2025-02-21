@@ -60,8 +60,4 @@ for (let i = 0; i < slides.length; i++) {
         updateSlide(currentSlide);
     });
     dotsContainer.appendChild(dot);
-
-    if (i === 0) {
-        dot.classList.add('dot_selected');
-    }
 }
