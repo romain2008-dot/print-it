@@ -40,30 +40,20 @@ function updateSlide(index) {
 }
 
 function nextSlide() {
-  // Vérifie si l'on est à la dernière slide
   if (currentSlide === slides.length - 1) {
-    // Si oui, revient à la première slide
     currentSlide = 0;
   } else {
-    // Sinon, passe à la slide suivante
     currentSlide++;
   }
-
-  // Appelle la fonction updateSlide pour afficher la nouvelle slide.
   updateSlide(currentSlide);
 }
 
 function prevSlide() {
-  // Vérifie si l'on est à la première slide
   if (currentSlide === 0) {
-    // Si oui, va à la dernière slide
     currentSlide = slides.length - 1;
   } else {
-    // Sinon, passe à la slide précédente
     currentSlide--;
   }
-
-  // Appelle la fonction updateSlide pour afficher la nouvelle slide.
   updateSlide(currentSlide);
 }
 arrowLeft.addEventListener('click', prevSlide);
