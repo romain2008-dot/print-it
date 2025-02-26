@@ -60,11 +60,15 @@ arrowLeft.addEventListener('click', prevSlide);
 arrowRight.addEventListener('click', nextSlide);
 
 for (let i = 0; i < slides.length; i++) {
-    const dot = document.createElement('div');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => {
-        currentSlide = i;
-        updateSlide(currentSlide);
-    });
-    dotsContainer.appendChild(dot);
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+
+  if (i === 0) {
+      dot.classList.add('dot_selected');
+  }
+  dot.addEventListener('click', () => {
+      currentSlide = i;
+      updateSlide(currentSlide);
+  });
+  dotsContainer.appendChild(dot);
 }
